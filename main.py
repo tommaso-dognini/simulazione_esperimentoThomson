@@ -297,8 +297,12 @@ if pagina == 'SIMULAZIONE':
 
 if pagina =='CODICE SORGENTE':
     st.write('''
-    In questa pagina è possibile consultare il codice sorgente di questa applicazione web, esso è inoltre scaricabile e modificabile attraverso il menù in alto a destra che rimanda alla repository GitHub di Tommaso Dognini.\n
+    \n
+    - In questa pagina è possibile consultare il codice sorgente di questa applicazione web, esso è inoltre scaricabile e modificabile attraverso il menù in alto a destra che rimanda alla repository GitHub di Tommaso Dognini.\n
     \n
     https://github.com/tommaso-dognini/simulazione_esperimentoThomson/blob/master/main.py 
     ''')
-    st.write("Link per scaricare la relazione completa in formato pdf\n")
+    st.write('''
+    - Link per scaricare la relazione completa in formato pdf\n
+     https://github.com/tommaso-dognini/simulazione_esperimentoThomson/blob/master/Relazione_Thomson_DogniniFumagalliTudosa.pdf
+     ''')
