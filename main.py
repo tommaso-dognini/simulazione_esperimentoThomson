@@ -6,7 +6,7 @@ import numpy as np
 
 
 # titolo della pagina
-st.markdown("<h1 style='text-align: center; color: #b30000;'>Esperimento di J.J. Thomson</h1>",
+st.markdown("<h1 style='text-align: center; color: #191970;'>Esperimento di J.J. Thomson</h1>",
             unsafe_allow_html=True)
 
 # titolo e pagina laterale
@@ -100,13 +100,109 @@ if pagina == 'HOME':
     \nIn questo esperimento i risultati ottenuti sono stati registrati attraverso una fotografia del sistema raffigurante la traiettoria in forma di raggio luminoso degli elettroni all’interno del condensatore.
     Pertanto per poter procedere con l’analisi dei dati e quindi con il calcolo del rapporto $e/m$ è necessario estrapolare dalla fotografia le informazioni sul moto degli elettroni (coppia di coordinate *x,y*) e misurare le condizioni iniziali a cui il fascio di elettroni è sottoposto.
     
-    \n**Misurazione delle condizioni iniziali**\n
-    Con il termine condizioni iniziali si intendono tutti quei fattori che concorrono nel calcolo del rapporto $e/m$ attraverso l’equazione della traiettoria precedentemente trovata e che rimangono, a meno di variazioni volontarie, costanti durante il corso dell’esperimento. Questi fattori sono:
+    \n**Misurazione delle condizioni iniziali**
+    \nCon il termine condizioni iniziali si intendono tutti quei fattori che concorrono nel calcolo del rapporto $e/m$ attraverso l’equazione della traiettoria precedentemente trovata e che rimangono, a meno di variazioni volontarie, costanti durante il corso dell’esperimento. Questi fattori sono:
+    ''')
+    st.write('''
+    - La differenza di potenziale $\Delta V$ applicata alle armature del condensatore.
+	- La differenza di potenziale $\Delta V_2$ applicata alle estremità del filamento metallico (che funge da acceleratore per gli elettroni) e quindi la velocità orizzontale (perché il fascio è collimato da una piastra metallica) con cui gli elettroni sono immessi nel condensatore
+	- La distanza d tra le armature del condensatore
+    ''')
+    st.write('''
+    ***D.D.P. tra le armature del condensatore: ***
+    In questo esperimento sono state effettuate due misurazioni applicando d.d.p. differenti alle armature del condensatore:
+    ''')
+    img_tabelladdp = Image.open('img//tabelladdp.jpg')
+    st.image(img_tabelladdp,width=700)
 
-    -   La differenza di potenziale $\Delta V$ applicata alle armature del condensatore
-	-   La differenza di potenziale $\Delta V_2$ applicata alle estremità del filamento metallico (che funge da acceleratore per gli elettroni) e quindi la velocità orizzontale (perché il fascio è collimato da una piastra metallica) con cui gli elettroni sono immessi nel condensatore
-	-   La distanza d tra le armature del condensatore
+    st.write('''
+    ***D.D.P tra le estremità del filamento, velocità orizzontale iniziale: ***
+    Il $\Delta V_2$ applicato tra le estremità del filamento metallico in questo esperimento è stato mantenuto costante a 4000V.  Tale differenza di potenziale come illustrato precedentemente permette di accelerare gli elettroni prodotti dal filamento per effetto termoionico e quindi di migliorare l’osservazione del fascio degli stessi. 
+    Tra i fattori che concorrono al calcolo del rapporto $e/m$  c’è la velocita orizzontale iniziale degli elettroni, $v_0$, che dipende dal potenziale $\Delta V_2$. Per calcolare tale velocità, in questo esperimento, è stato utilizzato un procedimento semplificato che in realtà porta ad un risultato approssimato che si discosta da quello
+     che si otterrebbe seguendo il corretto procedimento teorico.  In particolare, è stato tralasciato, per semplicità, un passaggio che però risulta fondamentale in quanto senza di esso Thomson non avrebbe potuto ottenere i risultati che ha ottenuto. La semplificazione attuata si basa sul fatto che per semplicità non è stato considerato l’effetto del campo magnetico ed è stata utilizzata come costante nota (anche se per Thomson non lo era e per questo ha dovuto utilizzare un campo magnetico come è spiegato in: descrizione dell’esperimento) la carica dell’elettrone. Seguendo questo procedimento risulta infatti semplice calcolare la velocità orizzontale iniziale degli elettroni, $v_0$, infatti si può affermare che l’energia cinetica di ciascuna particella è uguale al lavoro da essa compiuta all’interno del condensatore.
+    Quindi:    
+    ''')
+    st.latex(r'\Delta K = e\Delta V \rightarrow \frac{1}{2}mv_0^2 =e\Delta V')
+    st.latex(r'\text{Quindi: } v_0^2 = \frac{2e\Delta V}{m}=1,4*10^{15} \frac{m}{s}')
+    st.write('''
+    con $v_i =0$ e $v_f=v_0$ \n
+    ***Distanza d tra le armature del condensatore: ***
+    Per poter calcolare l’intensità del campo elettrico uniforme all’interno del condensatore data la differenza di potenziale tra le sue armature è necessario conoscere la distanza tra di esse. Infatti:
+    ''')
+    st.latex(r'E = \frac{\Delta V}{d}')
+    st.write('''
+    In questo esperimento il sistema utilizzato integra all’interno del condensatore piano una scala graduata che facilita l’operazione di registrazione e di misurazione di *d* e delle coordinate *x,y* del moto. In particolare, la scala graduata ha come unità di misura 1cm e pertanto la distanza tra le armature risulta di 6,0 cm. 
+    ''')
+    st.write('''
+    **Analisi della fotografia: calcolo delle coordinate x,y**\n 
+    ***Metodo utilizzato: ***
+    Per poter eseguire l’analisi dei dati è necessario estrapolare dalla fotografia un determinato numero di coppie di coordinate *x,y* di punti appartenenti alla traiettoria degli elettroni in modo da poter verificare che il rapporto $e/m$  sia effettivamente costante. Tuttavia, procedere calcolando n volte il rapporto $e/m$   per ogni punto di coordinate $x_n,y_n$ implicherebbe l’utilizzo di una media semplice dei vari risultati ottenuti e quindi un’approssimazione insufficientemente precisa e che non terrebbe conto degli errori sperimentali commessi nel raccogliere i dati. 
+    Infatti, non essendo gli errori sperimentali quantificabili precisamente, a causa del metodo di raccolta dati utilizzato, non sarebbe possibile calcolare un errore relativo sulla misura finale. Pertanto in questo esperimento si è deciso di utilizzare n punti del fascio di elettroni e mediante le loro coordinate *x,y* calcolare l’equazione della linea di tendenza polinomiale di secondo 2° (la traiettoria ideale è una parabola come precedentemente dimostrato) in modo da ottenere  una buona approssimazione e di non dover considerare i singoli errori ma bensì l’imprecisione generale delle misurazioni quantificabile mediante l’indice R^2 della linea di tendenza cosi trovata.
+     Inoltre, così facendo, l’equazione della linea di tendenza trovata (che coincide con una ideale traiettoria parabolica che più si avvicina a quella calcolabile teoricamente) permette di identificare con precisione, scelto adeguatamente il sistema di riferimento, le radici dell’equazione e l’intercetta all’origine della parabola che dal punto di vista fisico coincidono con lo spazio *x* percorso in orizzontale nel condensatore e la deflessione verticale *y* subita dal fascio di elettroni. 
+    Dati quindi *x* e *y* è possibile scrivere l’equazione della traiettoria degli elettroni nella forma sopra citata e quindi quantificare il rapporto $e/m$ .
+    ''')
+    st.write("\n*In questo esperimento l’analisi grafica della fotografia è stata effettuata tramite geometra.*\n")
 
+    st.write('''
+    ***Fattore di scala dell’analisi grafica: ***
+    Procedendo come spiegato è necessario però considerare che le misure di *x,y* ottenute tramite l’analisi grafica della fotografia non hanno un significato reale a meno che normalizzate utilizzando il corretto fattore di scala. Infatti, si può dedurre facilmente lo zoom utilizzato nella fotografia la posizione della fotocamera rispetto al sistema fotografato (errore di parallasse dovuto al non perfetto allineamento con la normale al piano del condensatore) potrebbero portare a una parziale distorsione delle dimensioni dell’immagine che pertanto risulterebbero ingrandite o rimpicciolite rispetto alla realtà di un determinato fattore. Per ottenere quindi un risultato finale veritiero è necessario calcolare tale fattore di scala e normalizzare tramite esso tutte le misure estrapolate dalla fotografia. Tuttavia, è con i giusti accorgimenti è possibile evitare tale operazione e quindi anche gli errori sperimentali ad essa annessi. Infatti, se si prelevano tutte le misure dalla stessa fotografia e quindi si fa in modo che tutte siano affette dallo stesso fattore di scala è possibile fare il seguente ragionamento:\n    
+    ''')
+    st.latex(r'K_{fattore di scala}=\frac{x_{vituale}}{x_{reale}} \text{       quindi     }  x_r= \frac{x_v}{K}')
+    st.write("Se si analizza la formula finale da utilizzare per quantificare $e/m$ si nota che: \n")
+    st.latex(r'\frac{e}{m}=\frac{2ydv_0^2}{x^2\Delta V} \text{   moltiplicando per K le dimensioni virtuali    } \frac{e}{m}=\frac{2yKdKv_0^2}{(xK)^2\Delta V }')
+    st.latex(r'\text{Quindi:    } \frac{e}{m}=\frac{2ydv_0^2K^2}{x^2\Delta V K^2}')
+    st.write("Si nota quindi come, se le misure affette da K sono tutte, quindi *x,y* e anche *d*,allora il fattore di scala si semplifica e pertanto non è necessario normalizzare le misure precedentemente calcolate.")
+
+    st.write('''
+    ***Scelta del sistema di riferimento: ***\n
+    *In questo esperimento l’analisi grafica della fotografia è stata effettuata tramite Geogebra.*\n
+    Anche la scelta del sistema di riferimento è importante ed ha la sua influenza sulla precisione del risultato finale. Si consiglia per questo, dato che il fattore di scala non influenza il risultato finale, di ingrandire l’immagine il giusto, in modo che risulti più semplice e accurata la scelta dei punti della traiettoria. Inoltre, si consiglia di posizionare l’immagine all’interno del sistema di riferimento cartesiano di Geogebra in modo che l’origine degli assi coincida con 
+    l’intersezione degli assi della scala graduata posta all’interno del condensatore. Si consiglia inoltre di ruotare l’immagine o modificarla nel caso in cui questa raffiguri il sistema dell’esperimento storto o inclinato: non interessa l’orientamento dell’immagine ma il giusto allineamento tra gli assi cartesiani di Geogebra e la scala graduata dell’immagine.
+    ''')
+    st.write(" ## Analisi dei risultati ottenuti \n ")
+    st.write("### Osservazione 1")
+    img_osservazione1 = Image.open('img//osservazione1.jpg')
+    st.image(img_osservazione1,width=800)
+
+    st.write("Ulteriori dati utilizzati per il calcolo: \n")
+    img_datioss1 = Image.open('img//datioss1.jpg')
+    st.image(img_datioss1,width=200)
+    
+    st.write("Rapporto $e/m$ ottenuto: \n")
+    st.latex(r'\frac{e}{m} = \frac{2ydv_0^2}{x^2\Delta V} = 1,72*10^{11}\frac{C}{kg}')
+
+    st.write("### Osservazione 2")
+    
+    img_osservazione2 = Image.open('img//osservazione2.jpg')
+    st.image(img_osservazione2,width=800)
+
+    st.write("Ulteriori dati utilizzati per il calcolo: \n")
+    img_datioss2 = Image.open('img//datioss2.jpg')
+    st.image(img_datioss2,width=200)
+
+    st.write("Rapporto $e/m$ ottenuto: \n")
+    st.latex(r'\frac{e}{m} = \frac{2ydv_0^2}{x^2\Delta V} = 1,90*10^{11}\frac{C}{kg}')
+
+    st.write('''
+    *In entrambe le osservazioni i valori di *x* e *y* utilizzati sono stati calcolati tramite l’equazione della traiettoria (linea di tendenza) uno come soluzione accettabile dell’equazione e l’altro come intercetta all’origine della parabola. Il valore di $d$ è invece stato calcolato facendo una media aritmetica di 3 misurazioni (virtuali) in modo da ottenere un valore più preciso ed esatto.*\n
+    ''')
+    st.write('''
+    I risultati ottenuti sono comparabili ma non perfettamente coincidenti infatti si nota come il rapporto ottenuto dalla seconda osservazione, con d.d.p. di 500V sia maggiore di quello atteso e di quello ottenuto nella prima osservazione. Concludere che tale differenza sia dovuta ad errori sperimentali e alla possibile imprecisione nel raccogliere i dati in quanto con un potenziale minore applicato alle armature del condensatore la deflessione verticale risulta minore e pertanto l’errore, 
+    nonostante sia simile a quello della prima osservazione, diventa percentualmente maggiore.\n
+
+    In conclusione, si può affermare che i risultati ottenuti sono comparabili tra loro e con un livello di precisione accettabile per questo esperimento. Infatti, analizzando singolarmente ogni osservazione si nota che il coefficiente di determinazione $R^2$ delle linee di tendenza ottenute è prossimo a 1 (0,997 nel caso di d.d.p. 1000V e 0,996 nel caso si d.d.p. 500V)
+     il cui significato è di esprimere la variabilità dei dati e quindi la correttezza del modello statistico utilizzato; quanto più esso tende ad 1 tanto più il modello utilizzato risulta preciso e affidabile. Tale precisione conferma quindi il comportamento del moto degli elettroni che ci si attendeva ossia quello di un moto simile a quello di un proiettile (come aveva osservato Thomson) e di tipo parabolico dovuto all’interazione degli elettroni, 
+     in quanto carichi, con il campo elettrico prodotto dal condensatore. Entrambe le osservazioni hanno inoltre permesso di confermare non solo che gli elettroni siano particelle cariche ma anche che la loro carica è di segno negativo in quanto in entrambe le osservazioni la deflessione verticale avviene nella direzione della piastra positiva del condensatore. In fine, comparando i risultati dei rapporti $e/m$ ottenuti dalle due osservazioni è possibile anche confermare che questo rimane costante e quindi che indipendentemente dalle condizioni iniziali le particelle 
+     osservate mantengono invariate la loro carica e massa che risultano quindi esprimibili 
+    attraverso un rapporto definito e costante. 
+    ''')
+    st.write('''
+    ## Confronto con dati reali \n
+    Conoscendo ad oggi con elevata precisione la massa e la carica di un elettrone è possibile verificare la correttezza dei risultati ottenuti calcolando il rapporto con i dati reali:\n
+    ''')
+    st.latex(r'\frac{e}{m} = \frac{1,602*10^{-19}}{9,109*10^{-31}} = 1,759*10^{11}\frac{C}{kg}')
+    st.write('''
+    È possibile affermare che i rapporti ottenuti dall’esperimento siano corretti e anche piuttosto precisi, in particolare il rapporto ottenuto dalla prima osservazione.\n
     ''')
 
 if pagina == 'SIMULAZIONE':
