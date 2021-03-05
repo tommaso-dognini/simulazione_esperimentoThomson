@@ -11,7 +11,7 @@ st.markdown("<h1 style='text-align: center; color: #191970;'>Esperimento di J.J.
 
 # titolo e pagina laterale
 st.sidebar.title('Menù\n')
-pagina = st.sidebar.radio('', ['HOME', 'SIMULAZIONE', 'LINK UTILI'], index=0)
+pagina = st.sidebar.radio('', ['HOME', 'SIMULAZIONE'], index=0)
 if pagina == 'HOME':
     
     st.write('''
@@ -281,3 +281,6 @@ if pagina == 'SIMULAZIONE':
     y = traiettoria[1]
     x = traiettoria[0]
     em = (2*y[-1]*10**-2*v0*d/(ddp*(x[-1]*10**-2)**2))*10**-11
+
+    st.write("### Risultato della simulazione\n")
+    st.latex(r'e/m =   %s *10^{11} C/kg' %em.round(3))
