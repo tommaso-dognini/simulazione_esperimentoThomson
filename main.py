@@ -63,6 +63,10 @@ if pagina == 'HOME':
 
     \n
     ### L'origine degli elettroni: l'effetto termoionico \n
+    L'effetto termoionico (o effetto termoelettronico) consiste nell'emissione indotta termicamente di particelle cariche (elettroni o ioni, "termoioni" da cui il nome), da parte di un materiale, a volte un metallo riscaldato ad alta temperatura, per esempio a seguito del passaggio di una corrente elettrica.
+    L'emissione degli elettroni avviene come conseguenza dell'aumento della loro energia cinetica, osservato come aumento della temperatura, che permette loro di vincere la forza che li trattiene vincolati agli atomi del materiale. La particella emessa tenderà a rimanere in prossimità della superficie emettitrice, la quale si sarà caricata di una carica opposta nel segno ma uguale in modulo al totale delle cariche emesse. 
+    Quando gli elettroni assumono un energia maggiore del lavoro che occorrerebbe fare per estrarli, allora essi potrebbero essere in grado di lasciare la superficie metallica. Non tutti gli elettroni con un tale quantità di energia però sono in grado di fuoriuscire dal metallo; Infatti, possono essere estratti solo quelli che si trovano in prossimità della superficie e che si stanno muovendo nel verso uscente da essa
+
     ''')
 
     #CALCOLO TEORICO E DEFINIZION DEL RAPPORTO EM
