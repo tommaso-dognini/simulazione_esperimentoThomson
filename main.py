@@ -11,15 +11,15 @@ st.markdown("<h1 style='text-align: center; color: #191970;'>Esperimento di J.J.
 
 # titolo e pagina laterale
 st.sidebar.title('Menù\n')
-pagina = st.sidebar.radio('', ['HOME', 'SIMULAZIONE'], index=0)
+pagina = st.sidebar.radio('', ['HOME', 'SIMULAZIONE','CODICE SORGENTE'], index=0)
 if pagina == 'HOME':
     
     st.write('''
-    ### Abstract \n
+    ## Abstract \n
     The aim of this experiment is to calculate the ratio between the charge of the electron and its mass, using the
      data obtained from the reproduction of Thomson's experiment.
     
-    ### J.J. Thomson: la storia dietro la scoperta degli elettroni \n
+    ## J.J. Thomson: la storia dietro la scoperta degli elettroni \n
     Mentre Thomson frequentava l’Owen’s collage suo padre morì, e non potendo pagare le spese del college cercò di ricavare i soldi
      dalle borse di studio della scuola.\n
     Nel 1884, all’età di 24 anni, si candida e viene sorprendentemente eletto come capo dell’istituto di ricerca di Cavendish, ove, aiutato da un’equipe di 8 assistenti,
@@ -27,7 +27,7 @@ if pagina == 'HOME':
       trovandosi in questa situazione dichiarerà di sentirsi come “un pescatore che ritrovatosi per caso in un posto cerca di pescare un pesce più grosso delle sue possibilità”. Secondo l’autobiografia di Thomson,
        la scoperta dell’elettrone è nata dal tentativo di spiegare la discrepanza fra il comportamento dei raggi catodici quando immersi in campi magnetici e quando soggetti all’azione di forze elettrostatiche. 
 
-    ### La storia dell’elettrone da Faraday a Thomson \n
+    ## La storia dell’elettrone da Faraday a Thomson \n
     - 1833: M. Faraday ipotizza l’esistenza di un “atomo di elettricità” sulla base delle leggi dell’elettrolisi.
     - 1869: W. Hittorf studiando la scarica elettrica nei gas scopre i raggi catodici, utilizzati successivamente da Thomson per perseguire lo scopo del suo esperimento.
     - 1874: Primo tentativo di calcolo approssimativo della carica di questo “atomo di elettricità”, ad opera di G. J. Stoney, il quale fornisce una stima del valore della carica elementare utilizzando una sua precedente stima del valore del numero di Avogadro.
@@ -36,14 +36,14 @@ if pagina == 'HOME':
     - 1899: Misura della carica dell’elettrone grazie alla scoperta dell’allievo di Thomson, Wilson, il quale scopre che gli ioni prodotti ionizzando le molecole d’aria mediante raggi ultravioletti agiscono in appropriate condizioni da nuclei di condensazione delle goccioline d’acqua.
     - 1913: Millikan calcola con più precisione il valore della carica dell’elettrone, sostituendo le goccioline d’acqua con goccioline d’olio.
     \n
-    ### Descrizione dell’esperimento \n
+    ## Descrizione dell’esperimento \n
     Lo scopo dell’esperimento di Thomson era quello di studiare e comprendere il comportamento dell’atomo di elettricità, precedentemente definito da Stoney “elettrone”.  A riguardo erano diverse le teorie e gli esperimenti con i quali diversi fisici avevano tentato di descrivere il comportamento di questa ipotetica nuova particella, comportamento che ancora non era chiaro a causa delle forti divergenze dei risultati sperimentali pubblicati fino ad allora. Tra questi, i più contrastanti, che hanno poi portato Thomson ad ideare il suo esperimento, furono quelli di Hertz e quelli di Perrin. Il primo sosteneva infatti che i raggi catodici non subivano alcuna deflessione in presenza di forze elettriche e quindi che la loro natura non era quella di particelle cariche. Al contrario, Perrin poté affermare, a seguito di diversi esperimenti, che tali raggi erano portatori di cariche elettriche negative. L’evidente contraddizione nei due risultati indusse Thomson a considerare nuovamente entrambi gli esperimenti e a cercare, ideando un nuovo esperimento, di trarre una conclusione che smentisse la tesi dell’uno confermando quella dell’altro.
     Thomson, convinto della correttezza delle affermazioni di Perrin, ipotizzò che l’esperimento di Hertz poteva aver dato un risultato errato: egli sapeva infatti che i tubi per i raggi catodici utilizzati da Hertz funzionavano solo se in presenza di aria pertanto ipotizzò che questa ionizzandosi, diventasse conduttrice creando un effetto analogo alla quello della gabbia di Faraday.
     Egli scoprì inoltre che, facendo passare il raggio catodico attraverso un anodo positivo con un foro al centro, si otteneva un raggio collimato e quindi più potente. In questo modo fu per lui possibile abbassare drasticamente la quantità di aria necessaria, aspirandola dal tubo, diminuendo quindi l’influenza di quest’ultima sull’esperimento.  Modificando quindi l’sperimento di Hertz sulla base delle sue ipotesi diede vita ad un nuovo esperimento che gli permise di osservare come il fascio di elettroni prodotto dal filamento e sparato nel tubo catodico subisca una deflessione verso la piastra positiva, confermando la teoria di Perrin.
     Scoprì poi che i raggi catodici potevano attraversare il metallo; Egli ipotizzò che ciò fosse possibile purché le particelle si muovessero ad una velocità molto elevata. Stante che le particelle si muovano sia per l’azione della forza elettrica che della forza magnetica, Thomson introdusse un campo magnetico di intensità tale da bilanciare la forza elettrostatica, e osservare quindi rettilinea la direzione del raggio.
     Sapendo che la forza elettrostatica dipende dalla carica della particella, dalla sua velocità e dall’intensità del campo magnetico, e sapendo inoltre che la forza magnetica è il prodotto fra la carica della particella e dal campo, Thomson poté calcolare la velocità della particella, definita come il rapporto fra il campo magnetico e il campo elettrico. La velocità così calcolata ha un valore di circa 2,6*10^4 m/s qualsiasi sia la forza elettrica o magnetica applicata (purché sia bilanciata). Successivamente, Thomson rimosse il campo magnetico lasciando applicata solo la forza elettrostatica, e osservò che il raggio seguiva una traiettoria simile a quella di un proiettile lanciato orizzontalmente. Sapendo che la forza di gravità relativa alle particelle contenute nei raggi catodici è così piccola da poter essere trascurata, e conoscendo la velocità delle particelle, calcolata precedentemente, poté calcolare il tempo impiegato dalle particelle per raggiungere la fine del tubo da lui utilizzato, e di conseguenza la loro accelerazione. Sostituendo il valore trovato nella formula $F=ma = qE$, calcolò il rapporto fra la carica della particella e la sua massa (uguale ad a/E), scoprendo che esso rimaneva costante per qualsiasi sostanza venisse utilizzata per l’elettrodo e qualsiasi gas venisse utilizzato per riempire il tubo. Poté quindi provare l’esistenza di particelle fondamentali, equi presenti in tutti gli oggetti, gli elettroni.
     \n
-    ### Il sistema utilizzato \n
+    ## Il sistema utilizzato \n
     ''')
 
     img_sistema = Image.open('img//sistema.jpg')
@@ -71,7 +71,7 @@ if pagina == 'HOME':
 
     #CALCOLO TEORICO E DEFINIZION DEL RAPPORTO EM
     st.write(''' 
-    ### Calcolo teorico e definizione del rapporto e/m \n
+    ## Calcolo teorico e definizione del rapporto e/m \n
 
     L’intero esperimento si basa sullo studio e sull’osservazione del comportamento degli elettroni. Infatti, ipotizzando (come aveva fatto Perrin) che questi siano carichi negativamente, l’intento di Thomson era quello di osservare il loro comportamento dinamico all’interno di un campo elettrico in modo da poter stabilire il segno e la quantità di carica posseduta da ogni ipotetica particella. A questo è dovuto l’utilizzo di un condensatore piano posto all’interno della sfera di vetro, infatti, è noto che all’interno di un condensatore il campo elettrico è costante. Tale proprietà rende quindi un condensatore piano perfetto per i fini dell’esperimento e permette di operare attraverso calcoli piuttosto semplici grazie alle sue diverse proprietà. In particolare, sfruttando la relazione $\Delta V =Ed$ , risulta piuttosto semplice descrivere, data la differenza di potenziale applicata alle armature del condensatore, l’intensità del campo elettrico al suo interno. Infine, sfruttando la definizione di forza elettrica di una particella in un campo elettrico costante, $F=qE$, e il secondo principio della dinamica, $F=ma$ , è possibile scrivere e calcolare il rapporto tra la carica e
      la massa di ciascuna particella, noto il comportamento delle stesse all’interno di un campo elettrico (traiettoria, cioè *x,y* in funzione del tempo). 
@@ -100,7 +100,7 @@ if pagina == 'HOME':
 
     #MISURAZIONE E CALCOLI SPERIMENTALI
     st.write('''
-    ### Misurazioni e calcoli sperimentali
+    ## Misurazioni e calcoli sperimentali
     \nIn questo esperimento i risultati ottenuti sono stati registrati attraverso una fotografia del sistema raffigurante la traiettoria in forma di raggio luminoso degli elettroni all’interno del condensatore.
     Pertanto per poter procedere con l’analisi dei dati e quindi con il calcolo del rapporto $e/m$ è necessario estrapolare dalla fotografia le informazioni sul moto degli elettroni (coppia di coordinate *x,y*) e misurare le condizioni iniziali a cui il fascio di elettroni è sottoposto.
     
@@ -208,6 +208,16 @@ if pagina == 'HOME':
     st.write('''
     È possibile affermare che i rapporti ottenuti dall’esperimento siano corretti e anche piuttosto precisi, in particolare il rapporto ottenuto dalla prima osservazione.\n
     ''')
+    st.write('''
+    ## Conclusioni\n
+    Dal punto di vista storico, grazie al suo esperimento, Thomson è riuscito a chiarire l’esistenza degli elettroni, e affermare che:
+    -	Gli elettroni sono ovunque e sono più di mille volte più piccoli dell’atomo di idrogeno
+    -	Gli oggetti assumono carica positiva poiché essi cedono elettroni, mentre gli oggetti negativi presentano un sovraffollamento di elettroni;
+    -	La corrente è definita come il flusso di elettroni dal polo negativo al polo positivo;\n
+    Thomson elaborò anche la teoria del “Plum Pudding”, la quale ipotizzava che gli elettroni negativi fossero immersi in una regione positiva. Questa ipotesi venne poi smentita successivamente da un allievo di Thomson, chiamato Hernest Rutherford, il quale conducendo esperimenti con le radiazioni confutò inavvertitamente l’ipotesi del maestro.\n
+    Come si può evincere dall’analisi dei dati precedentemente elaborata, il rapporto fra la carica dell’elettrone e la sua massa rimane costante indipendentemente dalle condizioni iniziali, confermando i dati attesi.
+
+    ''')
 
 if pagina == 'SIMULAZIONE':
     st.write('''
@@ -269,7 +279,7 @@ if pagina == 'SIMULAZIONE':
     plt.text((l*10**2 - 1), ((d/2)*10**2 - 0.5),
              'lastra +', horizontalalignment='left')
     plt.text((l*10**2 - 1), - ((d/2)*10**2 - 0.5),
-             'lastra +', horizontalalignment='left')
+             'lastra -', horizontalalignment='left')
 
     # plt.grid()
     # plt.legend()
@@ -284,3 +294,11 @@ if pagina == 'SIMULAZIONE':
 
     st.write("### Risultato della simulazione\n")
     st.latex(r'e/m =   %s *10^{11} C/kg' %em.round(3))
+
+if pagina =='CODICE SORGENTE':
+    st.write('''
+    In questa pagina è possibile consultare il codice sorgente di questa applicazione web, esso è inoltre scaricabile e modificabile attraverso il menù in alto a destra che rimanda alla repository GitHub di Tommaso Dognini.\n
+    \n
+    https://github.com/tommaso-dognini/simulazione_esperimentoThomson/blob/master/main.py 
+    ''')
+    st.write("Link per scaricare la relazione completa in formato pdf\n")
