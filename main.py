@@ -228,7 +228,7 @@ if pagina == 'SIMULAZIONE':
         \n ### Condizioni iniziali
     ''')
     ddp = st.number_input('D.D.P. tra armature condensatore [V]',step =1, value=1000)
-    v0_input = st.number_input('Velocità iniziale degli elettroni [(*10^15)m/s]',step=0.1, value = 1.4)
+    v0_input = st.number_input('Quadrato della velocità iniziale [(*10^15)m/s]',step=0.1, value = 1.4)
     st.write('''### Dimensioni del condensatore \n ''')
     d_input = st.number_input('Distanza d tra le armature del condensatore [cm]',step=0.1, value = 6.0)
     l_input = st.number_input('Lunghezza l del condensatore [cm]',step=0.1, value = 10.0)
